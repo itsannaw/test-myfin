@@ -1,0 +1,182 @@
+.page {
+    text-align: center;
+    padding: 5% 10%;
+    font-family: 'Roboto', sans-serif;
+    background: #8fd7ff;
+    color: #ffffff;
+}
+
+.table-wrap {
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+    box-shadow: #6b737d 0px 0px 10px;
+    color: #000;
+}
+
+.background-image {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.credit-table {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.credit-table__row {
+    border: 1px solid #ddd;
+    padding: 5px;
+    gap: 5px;
+    transition: ease 0.3s;
+}
+
+.credit-table__body .credit-table__row:hover {
+    cursor: pointer;
+    background-color: #f8fdff;
+}
+
+.credit-table__row p {
+    margin: 0;
+    font-size: 12px;
+    color: #6b737d;
+}
+
+.credit-table__header,
+.credit-table__cell {
+    padding: 10px;
+    text-align: center;
+}
+
+.credit-table__header {
+    color: #6b737d;
+    background-color: #f1fbff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.button {
+    background-color: #f78f1e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e86809;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    max-width: 90%;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    gap: 10px;
+    color: #000;
+}
+
+.modal__close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal__label {
+    text-align: start;
+    font-weight: bold;
+}
+
+.modal__input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .credit-table {
+        border: 0;
+    }
+
+    .credit-table__head {
+        display: none;
+    }
+
+    .credit-table__row {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .credit-table__cell {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-right: 1px solid transparent;
+    }
+
+    .credit-table__cell:last-child {
+        border-bottom: 0;
+    }
+
+    .credit-table__cell:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .background-image {
+        display: none;
+    }
+
+    .modal__content {
+        width: 80%;
+        margin: 5% auto;
+        padding: 10px;
+    }
+
+    .modal__form {
+        padding: 5%;
+    }
+}

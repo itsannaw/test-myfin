@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Кредиты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page">
+    <div class="table-wrap">
+        <table class="credit-table">
+            <thead class="credit-table__head">
+                <tr class="credit-table__row">
+                    <th class="credit-table__header">Кредит</th>
+                    <th class="credit-table__header">Ставка (%)</th>
+                    <th class="credit-table__header">Срок</th>
+                    <th class="credit-table__header"></th>
+                </tr>
+            </thead>
+            <tbody id="credit-table-body" class="credit-table__body">
+            </tbody>
+        </table>
+    </div>
+    <img src="public/sky.png" alt="sky" class="background-image">
+
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <form id="application-form" class="modal__form">
+                <label for="name" class="modal__label">Имя:</label>
+                <input type="text" id="name" name="name" class="modal__input" placeholder="Например, Иван" value="" required>
+                <label for="contact" class="modal__label">Контактная информация:</label>
+                <input type="tel" id="phone" autocomplete="tel" name="phone" class="modal__input" pattern="\+375\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}"
+                    placeholder="Например, +375 (29) 123-45-67" required>
+                <button type="submit" class="button">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="js/credit-table.js"></script>
+</body>
+
+</html>
