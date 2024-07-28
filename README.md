@@ -37,4 +37,10 @@
 
 2. Убедитесь, что у вас установлен PHP (команда php -v, если нет, то [ссылка](https://www.php.net/manual/en/install.php)).
 
-3. Запустите проект (команда php -s localhost:3000)
+3. Запустите проект (команда php -S localhost:3000)
+
+---
+
+![image](https://github.com/user-attachments/assets/5e7ab56e-2686-42bd-b92e-92285a52cee4)
+![image](https://github.com/user-attachments/assets/8810e6dc-9a64-4aa4-b061-19626fc33937)
+
